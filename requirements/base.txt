@@ -1,0 +1,6 @@
+Django
+dj-database-url
+django-tailwind
+httpx
+psycopg2
+python-decouple
