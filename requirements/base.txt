@@ -1,6 +1,6 @@
-Django
-dj-database-url
-django-tailwind
-httpx
-psycopg2
-python-decouple
+Django==4.2.4
+dj-database-url==2.1.0
+django-tailwind==3.6.9
+httpx==0.24.1
+psycopg2==2.9.1
+python-decouple==3.8

@@ -3,6 +3,7 @@ import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
 
 import dnd5e_dmcompanion
+
 from .base import *
 
 # ==============================================================================

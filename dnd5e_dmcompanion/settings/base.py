@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     "tailwind",
     "django_browser_reload",
     # Our Apps
+    "dnd5e_dmcompanion.modules.theme",
 ]
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
@@ -114,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # ==============================================================================
 # email Login
 # ==============================================================================
-AUTH_USER_MODEL = "core.User"
+
 AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
 ]

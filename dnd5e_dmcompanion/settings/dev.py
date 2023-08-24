@@ -1,8 +1,8 @@
 # flake8: noqa
 
-from .base import *
-
 import platform
+
+from .base import *
 
 current_os = platform.system()
 
