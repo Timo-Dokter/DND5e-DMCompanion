@@ -1,0 +1,27 @@
+{% extends "admin/base.html" %}
+
+{% comment %} {% load i18n eatn_tags static %} {% endcomment %}
+
+{% load i18n %}
+{% load static %}
+
+{% block title %}
+    {% if subtitle %}{{ subtitle }} |{% endif %}
+    {{ title }} | {{ site_title|default:_("Django site admin") }}
+{% endblock title %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/admin.css' %}" />
+    <link rel="stylesheet"
+          type="text/css"
+          href="{% static 'django_light/django_light.css' %}" />
+{% endblock extrastyle %}
+
+{% block branding %}
+    <h1 id="site-name">
+        <a href="{% url 'admin:index' %}">{{ site_header|default:_("Django administration") }}</a>
+    </h1>
+{% endblock branding %}
+
+{% block nav-global %}
+{% endblock nav-global %}

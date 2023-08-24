@@ -1,0 +1,104 @@
+:root {
+  --primary: #26282a;
+  --secondary: #090809;
+  --accent: #e40712;
+  --primary-fg: #fff;
+
+  --body-fg: #333;
+  --body-bg: #fff;
+  --body-bg-image: url("/static/images/background_texture.png") repeat;
+  --body-quiet-color: #666;
+  --body-loud-color: #000;
+
+  --header-color: #fff;
+  --header-branding-color: var(--accent);
+  --header-bg: var(--secondary);
+  --header-link-color: var(--primary-fg);
+  --header-font-size: 0.75rem;
+  --header-font-weight: 500;
+  --header-border-color: #bc0f0f;
+
+  --breadcrumbs-fg: #a5afba;
+  --breadcrumbs-link-fg: var(--body-bg);
+  --breadcrumbs-bg: var(--primary);
+
+  --link-fg: #bc0f0f;
+  --link-hover-color: #e40712;
+  --link-selected-fg: #5b80b2;
+
+  --hairline-color: #e8e8e8;
+  --border-color: #ccc;
+
+  --error-fg: #ba2121;
+
+  --message-success-bg: #dfd;
+  --message-warning-bg: #ffc;
+  --message-error-bg: #ffefef;
+
+  --darkened-bg: #f8f8f8;
+  --selected-bg: #e4e4e4;
+  --selected-row: #ffc;
+
+  --button-fg: #fff;
+  --button-bg: rgba(9, 8, 9, 0.6);
+  --button-hover-bg: var(--secondary);
+  --default-button-bg: rgba(9, 8, 9, 0.6);
+  --default-button-hover-bg: var(--secondary);
+  --close-button-bg: #747474;
+  --close-button-hover-bg: #333;
+  --delete-button-bg: #ba2121;
+  --delete-button-hover-bg: #a41515;
+
+  --object-tools-fg: var(--button-fg);
+  --object-tools-bg: var(--close-button-bg);
+  --object-tools-hover-bg: var(--close-button-hover-bg);
+
+  --card-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background-image: var(--body-bg-image);
+}
+
+#content-related {
+  background-color: var(--body-bg);
+  box-shadow: var(--card-shadow);
+}
+
+#content-main .module {
+  box-shadow: var(--card-shadow);
+}
+
+#content h1 {
+  font-weight: 600;
+}
+
+.model-group th a:hover {
+  text-decoration: underline;
+}
+
+#user-tools,
+#logout-form button {
+  font-size: var(--header-font-size);
+  font-weight: var(--header-font-weight);
+}
+
+#header {
+  border-bottom: var(--header-border-color) solid 1px;
+}
+
+#branding h1 {
+  font-weight: 600;
+}
+
+div.breadcrumbs a {
+  color: var(--breadcrumbs-fg);
+}
+
+div.breadcrumbs a:hover {
+  color: var(--breadcrumbs-link-fg);
+}
+
+.paginator {
+  width: auto;
+}
