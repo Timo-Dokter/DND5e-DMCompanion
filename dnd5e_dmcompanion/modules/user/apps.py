@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class CampaignsConfig(AppConfig):
+class UserConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "dnd5e_companion.webapps.campaigns"
+    name = "dnd5e_dmcompanion.modules.user"

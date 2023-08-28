@@ -2,6 +2,10 @@
 
 {% load i18n static %}
 
+{% block extrahead %}
+<link rel="icon" href="{% static 'images/favicon.ico' %}">
+{% endblock extrahead %}
+
 {% block userlinks %}
     {% if site_url %}
         <a href="{{ site_url }}">{% translate "View site" %}</a> /

@@ -18,7 +18,6 @@ DEBUG = config("DEBUG", default=True, cast=bool)
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="127.0.0.1,localhost", cast=Csv())
 
 INSTALLED_APPS = [
-    # "django_light",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -30,6 +29,9 @@ INSTALLED_APPS = [
     "django_browser_reload",
     # Our Apps
     "dnd5e_dmcompanion.modules.theme",
+    "dnd5e_dmcompanion.modules.campaign",
+    "dnd5e_dmcompanion.modules.world",
+    "dnd5e_dmcompanion.modules.user",
 ]
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
@@ -175,3 +177,5 @@ TAILWIND_APP_NAME = "dnd5e_dmcompanion.modules.theme"
 # ==============================================================================
 
 SIMPLE_ENVIRONMENT = config("SIMPLE_ENVIRONMENT", default="dev")
+
+AUTH_USER_MODEL = "user.CustomUser"
