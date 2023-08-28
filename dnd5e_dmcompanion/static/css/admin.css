@@ -57,7 +57,7 @@
 }
 
 body {
-  background-image: var(--body-bg-image);
+  background: var(--body-bg-image);
 }
 
 #content-related {
