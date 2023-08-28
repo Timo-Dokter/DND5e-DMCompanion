@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     # 3rd parties
     "tailwind",
     "django_browser_reload",
+    "django_bleach",
     # Our Apps
     "dnd5e_dmcompanion.modules.theme",
     "dnd5e_dmcompanion.modules.campaign",
