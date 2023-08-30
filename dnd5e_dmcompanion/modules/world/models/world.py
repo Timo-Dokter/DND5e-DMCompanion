@@ -14,7 +14,7 @@ class World(models.Model):
     image = models.ImageField(upload_to="worlds", blank=True, null=True)
     is_active = models.BooleanField(default=True)
     dm = models.ForeignKey(
-        "user.User",
+        "user.CustomUser",
         on_delete=models.CASCADE,
         related_name="worlds",
         blank=True,
