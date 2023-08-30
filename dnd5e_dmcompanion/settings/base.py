@@ -33,6 +33,8 @@ INSTALLED_APPS = [
     "dnd5e_dmcompanion.modules.campaign",
     "dnd5e_dmcompanion.modules.world",
     "dnd5e_dmcompanion.modules.user",
+    "dnd5e_dmcompanion.modules.character",
+    "dnd5e_dmcompanion.modules.item",
 ]
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
