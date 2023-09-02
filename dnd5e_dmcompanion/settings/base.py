@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     "tailwind",
     "django_browser_reload",
     "django_bleach",
+    "import_export",
     # Our Apps
     "dnd5e_dmcompanion.modules.theme",
     "dnd5e_dmcompanion.modules.campaign",

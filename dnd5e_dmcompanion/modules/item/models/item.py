@@ -44,6 +44,16 @@ class Item(models.Model):
         ("legendary", _("Legendary")),
         ("artifact", _("Artifact")),
     )
+    ITEM_TYPES = (
+        ("weapon", _("Weapon")),
+        ("armor", _("Armor")),
+        ("consumable", _("Consumable")),
+        ("tool", _("Tool")),
+        ("adventuring_gear", _("Adventuring Gear")),
+        ("mounts_and_vehicles", _("Mounts and Vehicles")),
+        ("trade_goods", _("Trade Goods")),
+        ("magic_item", _("Magic Item")),
+    )
 
     armor_class = models.PositiveIntegerField(blank=True, null=True)
     base_item = models.CharField(max_length=255, blank=True, null=True)
@@ -60,7 +70,7 @@ class Item(models.Model):
     magic_item = models.BooleanField(default=False)
     max_charges = models.PositiveIntegerField(blank=True, null=True)
     name = models.CharField(max_length=255)
-    price = models.PositiveIntegerField(blank=True, null=True)
+    price = models.FloatField(blank=True, null=True)
     price_type = models.CharField(
         max_length=255, choices=PRICE_TYPES, blank=True, null=True
     )
@@ -82,7 +92,7 @@ class Item(models.Model):
         blank=True,
         null=True,
     )
-    type = models.CharField(max_length=255)
+    type = models.CharField(max_length=255, choices=ITEM_TYPES, blank=True, null=True)
     weight = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
 
     class Meta:
@@ -90,4 +100,16 @@ class Item(models.Model):
         verbose_name_plural = _("Items")
 
     def __str__(self):
-        return self.name
+        return f"{self.name} ({self.get_rarity_display()})"
+
+    def get_range(self):
+        if self.range:
+            return f"{self.range} ft./{self.range / 5} squares"
+        return "Default or 0"
+
+    def get_price(self):
+        if self.price and self.price_type:
+            return f"{self.price} {self.price_type}"
+        elif self.price:
+            return f"{self.price} Unknown"
+        return "0"
