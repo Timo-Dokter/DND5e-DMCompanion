@@ -8,12 +8,12 @@ class Workshop(Building):
     type = "Workshop"
     employees = models.ManyToManyField(
         "character.Character",
-        related_name="workshops",
+        related_name="workshops_employees",
         blank=True,
     )
     items = models.ManyToManyField(
         "item.Item",
-        related_name="workshops",
+        related_name="workshops_items",
         blank=True,
     )
 

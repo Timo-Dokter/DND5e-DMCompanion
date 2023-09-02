@@ -8,12 +8,12 @@ class TownHall(Building):
     type = "TownHall"
     employees = models.ManyToManyField(
         "character.Character",
-        related_name="town_halls",
+        related_name="town_halls_employees",
         blank=True,
     )
     rooms = models.ManyToManyField(
         "character.Character",
-        related_name="town_halls",
+        related_name="town_halls_rooms",
         blank=True,
     )
 

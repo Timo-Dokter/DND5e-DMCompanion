@@ -8,12 +8,12 @@ class Castle(Building):
     type = "Castle"
     nobles = models.ManyToManyField(
         "character.Character",
-        related_name="castles",
+        related_name="castles_nobles",
         blank=True,
     )
     soldiers = models.ManyToManyField(
         "character.Character",
-        related_name="castles",
+        related_name="castles_soldiers",
         blank=True,
     )
 

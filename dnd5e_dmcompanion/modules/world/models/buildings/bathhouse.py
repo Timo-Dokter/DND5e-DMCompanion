@@ -8,12 +8,12 @@ class Bathhouse(Building):
     type = "Bathhouse"
     employees = models.ManyToManyField(
         "character.Character",
-        related_name="bathhouses",
+        related_name="bathhouses_employees",
         blank=True,
     )
     rooms = models.ManyToManyField(
         "character.Character",
-        related_name="bathhouses",
+        related_name="bathhouses_rooms",
         blank=True,
     )
 

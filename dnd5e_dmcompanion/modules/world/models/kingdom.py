@@ -6,14 +6,14 @@ class Kingdom(models.Model):
     council = models.ForeignKey(
         "character.CharacterGroup",
         on_delete=models.CASCADE,
-        related_name="kingdoms",
+        related_name="kingdoms_council",
         blank=True,
         null=True,
     )
     leader = models.ForeignKey(
         "character.Character",
         on_delete=models.CASCADE,
-        related_name="kingdoms",
+        related_name="kingdoms_leader",
         blank=True,
         null=True,
     )
@@ -29,7 +29,7 @@ class Kingdom(models.Model):
     army = models.ForeignKey(
         "character.CharacterGroup",
         on_delete=models.CASCADE,
-        related_name="kingdoms",
+        related_name="kingdoms_army",
         blank=True,
         null=True,
     )
